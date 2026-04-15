@@ -11,6 +11,7 @@ function Catalog() {
                 <Product />
                 <Product />
 
+
             </div>
 
         </div>
