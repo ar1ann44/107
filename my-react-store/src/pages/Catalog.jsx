@@ -2,7 +2,6 @@
 import Product from "../components/Product";
 import { useEffect, useState } from "react";
 import DataService from "../services/dataService";
-import { Button } from "bootstrap";
 
 function Catalog() {
     //const products = [];
@@ -24,7 +23,7 @@ function loadCatalog(){
     let service = new DataService();
     let data = service.getProducts();
     setProdsToDisplay(data); //initially, display all the producs
-    let cats = ["fruit", "Berry"];
+    let cats = ["Alternative", "Classic Rock", "Pop", "Metal"];
     setCategories(cats);
 }
 
@@ -49,8 +48,10 @@ setProdsToDisplay(list);
 
 
             <div className= "row">
-                {categories.map( cats => <button className="btn btn-dark rounded-pill" onClick={() => filter(cats)}> {cats} </button>)}
-                <button className="btn btn-dark rounded-pill" onClick={loadCatalog}>Show All</button>
+                <div className="d-flex gap-2 mb-4 flex-wrap">
+                    {categories.map( cats => <button className="btn btn-dark rounded-pill" onClick={() => filter(cats)}> {cats} </button>)}
+                    <button className="btn btn-dark rounded-pill" onClick={loadCatalog}>Show All</button>
+                </div>
                 <br/>
                 {prodsToDisplay.map(prod => <Product key={prod._id} data={prod}/>)}
                 <br/>

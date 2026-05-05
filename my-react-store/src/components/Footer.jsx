@@ -5,7 +5,7 @@ function Footer() {
     return (
         <footer className="bg-dark text-white py-2">
 
-            <h4 className="fs-6"> © 2026 My online Store. All rights reserved.</h4>
+            <h4 className="fs-6"> © 2026 Spin & Sound. All rights reserved.</h4>
 
         </footer>
 
