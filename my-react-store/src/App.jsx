@@ -10,12 +10,15 @@ import NotFound from './pages/NotFound';
 import Footer from './components/Footer';
 import NavBar from "./components/NavBar";
 
+import GlobalProvider from './state/globalProvider';
+
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './styles.css'
 
 function App() {
   return (
+    <GlobalProvider>
       <BrowserRouter>
         <NavBar/>
 
@@ -33,6 +36,7 @@ function App() {
 
         <Footer/>
       </BrowserRouter>
+    </GlobalProvider>
   );
 }
 

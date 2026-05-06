@@ -1,7 +1,13 @@
+import { useContext } from "react";
+import GlobalContext from "../state/globalContext"; 
+
 function Contact() {
+    const user = useContext(GlobalContext).user
+
     return (
         <div>
             <h1>Contact Spin & Sound</h1>
+            <p>Hi there I am {user.name}</p>
 
             <p>
                 We'd love to hear from you! Whether you have questions about our vinyl collection,
@@ -9,7 +15,7 @@ function Contact() {
             </p>
 
             <h4>Email</h4>
-            <p>contact@spinandsound.com</p>
+            <p>{user.email}</p>
 
             <h4>Phone</h4>
             <p>+52 665 456 7890</p>
