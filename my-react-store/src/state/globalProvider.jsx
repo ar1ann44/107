@@ -10,12 +10,20 @@ function GlobalProvider(props){
         setCart([...cart, product])
     }
 
+    function removeProductFromCart(productId){
+        const updatedCart = cart.filter(product => product._id !== productId);
+        setCart(updatedCart);
+    }
+
+
 //return the context provider, passing down state and functions as value
     return (
         <GlobalContext.Provider value={{
             user: user, //current user state
             cart: cart, //current cart state
-            addProductToCart: addProductToCart //function to add a product to the cart
+            addProductToCart: addProductToCart,
+            removeProductFromCart: removeProductFromCart
+            //function to add a product to the cart
         }}>
             {props.children} {/* render any child components inside the provider */}
         </GlobalContext.Provider>

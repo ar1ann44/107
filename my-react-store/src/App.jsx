@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router'
 
 import About from './pages/About';
 import Admin from './pages/Admin';
+import Cart from './pages/Cart';
 import Catalog from './pages/Catalog';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
@@ -29,6 +30,7 @@ function App() {
             <Route path='/contact' element={<Contact/>}/>
             <Route path='/catalog' element={<Catalog/>}/>
             <Route path='/admin' element={<Admin/>}/>
+            <Route path='/cart' element={<Cart/>}/>
             <Route path='*' element={<NotFound />} />
 
           </Routes>

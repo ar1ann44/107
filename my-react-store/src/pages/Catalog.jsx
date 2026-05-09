@@ -49,7 +49,7 @@ setProdsToDisplay(list);
 
             <div className= "row">
                 <div className="d-flex gap-2 mb-4 flex-wrap">
-                    {categories.map( cats => <button className="btn btn-dark rounded-pill" onClick={() => filter(cats)}> {cats} </button>)}
+                    {categories.map( cats => <button key={cats} className="btn btn-dark rounded-pill" onClick={() => filter(cats)}> {cats} </button>)}
                     <button className="btn btn-dark rounded-pill" onClick={loadCatalog}>Show All</button>
                 </div>
                 <br/>

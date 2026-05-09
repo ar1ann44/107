@@ -7,7 +7,8 @@ const GlobalContext = createContext({
     cart: [],
 
     //addProductToCart: funtion(){}
-    addProductToCart: () => {} 
+    addProductToCart: () => {},
+    removeProductFromCart: () => {}
 
 })
 
